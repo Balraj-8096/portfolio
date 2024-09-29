@@ -1,0 +1,36 @@
+<ng-container *ngIf="emptyOptionsMode">
+
+    <section class="animate-fadeUp">
+        <div class="empty-state" [class.shadow-container]="emptyOptionsMode.showShadow">
+            <div class="empty-state-content gap-1-0">
+                <div class="empty-state-icon">
+                    <img class="w-100" src="../../../../../assets/images/No-data-found.png" alt="">
+                </div>
+
+                <div class="empty-state-message">
+
+                    <span>
+                        {{ emptyOptionsMode.noDataFoundMessage }}
+                    </span>
+                </div>
+                <ng-container *ngIf="emptyOptionsMode.moreAction">
+
+                    <div class="empty-state-help">
+                        {{emptyOptionsMode.addActionMessage}}
+                    </div>
+                    <div>
+                        <button (click)="resolve()" class="button button-primary">
+                            <span class="button-text">
+                                {{emptyOptionsMode.addButtonText}}
+                            </span>
+                        </button>
+
+                    </div>
+                </ng-container>
+
+
+            </div>
+        </div>
+    </section>
+
+</ng-container>

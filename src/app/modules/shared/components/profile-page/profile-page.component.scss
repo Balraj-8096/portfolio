@@ -1,0 +1,93 @@
+@import "../../../../../assets/scss/user-variables.scss";
+
+.page-container {
+    padding: 2rem 2rem;
+    position: relative;
+}
+
+.card-box {
+    margin-top: 60px;
+    width: 400px;
+    background-color: $white-color;
+    border-radius: 13px;
+    padding: 1.5rem 1.5rem !important;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.profile-container {
+    margin-top: -95px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+
+}
+
+.profile-img {
+    background-color: #ffffff;
+    padding: 8px;
+    width: 150px;
+    height: 150px;
+    border-radius: 1rem;
+    aspect-ratio: 3/2;
+    object-fit: fill;
+    border: none;
+}
+
+.icon-container {
+    padding: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: $default-shadow;
+    transition: ease-in-out 0.1s all;
+
+    &:hover {
+        background-image: radial-gradient(circle, #e5f0ff, #edf3ff, #f5f7ff, #fbfbff, #ffffff);
+        transform: translateY(-15%);
+
+    }
+}
+
+.social-media-container {
+    // background-color: #EEEEEE;
+    padding: 0.5rem;
+    // border-radius: 13px;
+    // box-shadow: $default-shadow;
+    // transition: ease-in-out 0.5s all;
+
+}
+
+.facebook {
+    color: #4267B2;
+}
+
+.instagram {
+    color: #f09433;
+    color: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.linkedin {
+    color: #0A66C2;
+}
+
+.file {
+    color: #314699;
+}
+
+.twitter {
+    color: #1DA1F2;
+}
+
+.info-container {
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    background-color: #f7f7f7;
+    // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    background-image: linear-gradient(to right bottom, #eaf4ff, #fcfdff, #f3f4f9, #fafbff, #fafafa);
+}

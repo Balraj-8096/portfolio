@@ -1,0 +1,10 @@
+@import '../../../node_modules/@angular/material/theming';
+
+
+$custom-font-family: 'Titillium Web', sans-serif;
+
+// Define custom typography
+$custom-typography: mat-typography-config($font-family: $custom-font-family);
+
+// Include Angular Material typography with custom settings
+@include angular-material-typography($custom-typography);

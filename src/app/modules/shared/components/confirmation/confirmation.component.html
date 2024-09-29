@@ -1,0 +1,58 @@
+<div class="dialog-container"
+    [class]="{'delete': mode===modeEvent.DELETE, 'update': mode===modeEvent.UPDATE, 'add': mode===modeEvent.ADD}">
+
+    <section mat-dialog-title>
+        <div class="d-flex justify-content-start align-items-baseline" style="gap: 1rem;">
+            <div class="round-icon">
+                <ng-container *ngIf="mode===modeEvent.DELETE">
+                    <i class="fas fa-minus"></i>
+                </ng-container>
+                <ng-container *ngIf="mode===modeEvent.ADD">
+                    <i class="fas fa-plus"></i>
+                </ng-container>
+                <ng-container *ngIf="mode===modeEvent.UPDATE">
+                    <i class="far fa-edit"></i>
+                </ng-container>
+                <ng-container *ngIf="mode===modeEvent.UPLOAD">
+                    <i class="fas fa-upload"></i>
+                </ng-container>
+
+            </div>
+            <div class="fw-500 fs-17">
+                {{ title? title : 'Confirm'}}
+            </div>
+        </div>
+    </section>
+
+    <section mat-dialog-content>
+
+        <div [innerHTML]="message" class="text-center mt-2"></div>
+
+    </section>
+
+    <section mat-dialog-actions class="d-flex justify-content-end">
+
+        <section class="modal-buttons-container d-flex justify-content-end" style="gap: 0.5rem;">
+
+            <button (click)="dialogRef.close(false)" class="button button-secondary">
+                <span class="button-icon">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+                <span class="button-text">
+                    Cancel
+                </span>
+            </button>
+
+            <button (click)="dialogRef.close(true)" class="button button-primary">
+                <span class="button-icon">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                </span>
+                <span class="button-text">
+                    Confirm
+                </span>
+            </button>
+        </section>
+
+    </section>
+
+</div>

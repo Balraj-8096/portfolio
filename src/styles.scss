@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: NSimSun, Times, serif !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#e3ecfe), to(#f5faff)) fixed;
+    // background-image: linear-gradient(to bottom, #e3ecfe, #e3eefe, #e4f1fe, #e5f3fe, #e7f5fe, #eaf6fe, #eef8ff, #f1f9ff, #f5faff, #f9fbff, #fcfcfe, #e5f3fe);
+}
+
+
+@import 'bootstrap/scss/bootstrap';
+@import './assets/scss/user-common-styles.scss';
+@import './assets/scss/material-theme-styles.scss';
+@import './assets/scss/user-animation.scss';
+@import './assets/scss/user-styles.scss';
+@import './assets/scss/user.theme-styles.scss';

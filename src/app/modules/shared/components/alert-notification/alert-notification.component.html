@@ -1,0 +1,23 @@
+<ng-container *ngFor="let alert of alerts">
+    <div class="d-flex justify-content-end w-100 mt-2" style="padding-right: 30px;">
+
+        <div class="notification d-flex justify-content-center align-items-center"
+            [ngClass]="getAlertInfo(alert.code).class">
+
+            <div class="d-flex justify-content-center align-items-center gap-0-05" style="min-height: 39px;">
+
+                <span class="alert-icon" [innerHTML]="getAlertInfo(alert.code).icon"></span>
+
+                <span [innerHTML]="alert.message"></span>
+
+            </div>
+
+            <button *ngIf="alert.isDismissable" class="icon-button-borderless" (click)="dismissAlert(alert)">
+                <i class="fas fa-times" style="color: #160d46; opacity: 0.6;"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</ng-container>

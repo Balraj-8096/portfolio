@@ -1,0 +1,30 @@
+.card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: rgb(191, 151, 151);
+    border: 3px solid hsl(0, 2%, 22%);
+    border-radius: 5px;
+    margin-top: 100px;
+}
+
+.circles {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    row-gap: 50px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 50%;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

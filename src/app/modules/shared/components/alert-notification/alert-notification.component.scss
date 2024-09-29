@@ -1,0 +1,41 @@
+.notification {
+    text-align: center;
+    background-color: #aca7ca;
+    padding: .15rem 1.2rem;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    min-width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.error-alert {
+    background-color: #ffdbdb;
+
+    .alert-icon {
+        color: #cb3d46;
+    }
+}
+
+.warning-alert {
+    background-color: #fff1d2;
+
+    .alert-icon {
+        color: #f8c300;
+    }
+}
+
+.info-alert {
+    background-color: #e4e3ff;
+
+    .alert-icon {
+        color: #A084E8;
+    }
+}
+
+.success-alert {
+    background-color: #daeeda;
+
+    .alert-icon {
+        color: #59ae59;
+    }
+}

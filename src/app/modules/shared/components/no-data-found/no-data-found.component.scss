@@ -1,0 +1,44 @@
+.empty-state {
+    width: 100%;
+    // margin: 40px auto;
+    background: #ffffff;
+    // box-shadow: $default-shadow;
+    border-radius: 13px;
+    padding: 20px;
+
+    .empty-state-content {
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .empty-state-icon {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            border-radius: 200px;
+            justify-content: center;
+            background-color: #f7fafc;
+            box-shadow: 0px 2px 1px #e1e3ec;
+
+            // img{
+            //     opacity: 0.5;
+            // }
+
+        }
+
+        .empty-state-message {
+            // color: $primary-color;
+            font-weight: 500;
+        }
+
+        .empty-state-help {
+            color: #a2a5b9;
+        }
+    }
+}
+
+.shadow-container {
+    // box-shadow: $default-shadow;
+}

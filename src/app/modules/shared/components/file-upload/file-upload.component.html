@@ -1,0 +1,65 @@
+<div class="modal-container">
+
+    <section class="modal-heading-container">
+
+        <span class="modal-heading">
+            Import Tariff
+        </span>
+
+        <button class="mat-dialog-close" mat-icon-button mat-dialog-close>
+            <mat-icon>close</mat-icon>
+        </button>
+
+    </section>
+
+    <section class="modal-body">
+
+        <ng-container>
+
+            <section class="file-upload-container">
+                <div class="container mb-4">
+                    <div class="files-list">
+                        <div class="single-file" [ngClass]="{'error-parsing': showError}"
+                            *ngFor="let file of files; let i = index">
+                            <div class="d-flex" style="justify-content: space-between;flex-grow: 1;">
+                                <img src="../../../../../assets/images/ic-file.svg" width="45px" alt="file">
+                                <div class="info">
+                                    <span class="name">
+                                        {{ file?.name }}
+                                    </span>
+                                    <p class="size">
+                                        {{ formatBytes(file?.size) }}
+                                    </p>
+                                    <!-- <app-progress-indicator [progress]="file?.progress"></app-progress-indicator> -->
+                                </div>
+                            </div>
+                            <div class="error-text" *ngIf="showError">Error in the excel template.</div>
+                        </div>
+                    </div>
+
+                    <div class="fileupload-container d-flex" style="flex-direction: column;" appDnd
+                        (fileDropped)="onFileDropped($event)">
+                        <input type="file" [multiple]="false" #fileDropRef id="fileDropRef"
+                            (change)="fileBrowseHandler($event.target)" />
+                        <img src="../../../../../assets/images/ic-upload-file.svg" class="mb-3 ic-upload" alt="">
+                        <span class="mb-2">Drag and drop (CSV , XLS or XLXS) file here</span>
+                        <span class="mb-2">or</span>
+                        <div class="d-flex justify-content-center">
+                            <button (click)="fileBrowseHandler(fileDropRef)" class="button button-primary">
+                                <span class="button-icon">
+                                    <i class="far fa-file"></i>
+                                </span>
+                                <span class="button-text">
+                                    Browse for file
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </ng-container>
+
+    </section>
+
+</div>
