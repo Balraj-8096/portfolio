@@ -1,0 +1,105 @@
+@keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes jumpUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translate(70px, 70px);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1.1) translate(-10px, -10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translate(0px);
+    }
+}
+
+.animate-fadeLeft {
+    animation-name: fadeLeft;
+    animation-duration: 0.5s;
+}
+
+.animate-fadeRight {
+    animation-name: fadeRight;
+    animation-duration: 0.5s;
+}
+
+.animate-fadeUp {
+    animation-name: fadeUp;
+    animation-duration: 1s;
+}
+
+.animate-jumpUp {
+    animation-name: jumpUp;
+    animation-duration: 0.5s;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeDown {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: auto;
+    }
+}
+
+.animate-fadeDown {
+    animation: fadeDown 0.1s ease forwards;
+}
+
+.mouse-scroll-anime{
+    scale: 0.5;
+    opacity: 0;
+    transition: ease-in-out 0.1s all;
+    animation: scroll-fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+
+
+}
+@keyframes scroll-fade-in{
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}

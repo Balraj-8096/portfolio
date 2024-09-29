@@ -1,0 +1,267 @@
+@import "../../assets/scss/user-variables.scss";
+
+.page-container {
+    padding: 2rem 2rem;
+}
+
+.logo-container {
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    padding: 0 8px;
+}
+
+.link {
+
+    cursor: pointer;
+
+    i {
+        position: relative;
+        left: 0;
+        transition: ease 0.3s all;
+    }
+
+    &:hover {
+        text-decoration: underline;
+        color: darken($blue-text-color, 5%) !important;
+
+        i {
+            left: 10px;
+            color: darken($blue-text-color, 5%) !important;
+        }
+    }
+}
+
+.link-hovered {
+    text-decoration: underline;
+    color: darken($blue-text-color, 5%) !important;
+}
+
+.NA-label {
+    padding: 4px 10px;
+    background-color: #ebebeb;
+    color: rgb(75, 75, 75);
+    border-radius: 8px;
+}
+
+.icon-color {
+    color: $icon-color;
+}
+
+
+table {
+    width: 100%;
+
+    td {
+        padding: 10px 16px !important;
+        border-bottom: 1px solid #eef0f2 !important;
+    }
+}
+
+.clickable {
+
+    tr {
+        cursor: pointer !important;
+
+        &:hover {
+            background: #f3f3f57d !important;
+        }
+    }
+}
+
+.heading-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem 0;
+
+    .heading {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .sub-heading {
+        font-size: 10px;
+        font-weight: 500;
+        color: $grey-font-color;
+    }
+}
+
+.section-heading {
+
+    padding-bottom: 0.5rem;
+    border-bottom: $heading-border-bottom;
+    position: relative;
+    z-index: 1;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+
+    &:after {
+        content: "";
+        background-color: $primary-color;
+        width: 30px;
+        height: 3px;
+        border-radius: 0px;
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0px;
+    }
+}
+
+
+.example-box {
+    border: 1px solid grey;
+    border-radius: 8px;
+    border-bottom: solid 2px rgba(192, 212, 235, 0.3);
+    padding: 15px 10px;
+    color: $black-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: move;
+    background: $white-color;
+    font-size: 14px;
+}
+
+.card-box {
+    background-color: $white-color;
+    border-radius: 13px;
+    box-shadow: $default-shadow;
+    padding: 1.5rem 1.5rem !important;
+}
+
+
+.button {
+    text-decoration: none;
+    transition: all 0.3s;
+    overflow: hidden;
+    box-shadow: $button-shadow;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 6px 18px;
+    display: flex;
+    align-items: center;
+    gap: 0 0.7rem;
+
+    &:hover {
+        box-shadow: $button-shadow-hover;
+    }
+}
+
+.button:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.button-primary {
+    background: lighten($color: $primary-color-button-color, $amount: 10);
+    color: $white-color;
+
+    &:hover {
+        background: lighten($color: $primary-color-button-color, $amount: 3);
+    }
+}
+
+.button-secondary {
+    background: $secondary-button-color;
+    color: lighten($color: $primary-color-button-color, $amount: 10);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    .button-icon {
+        i {
+            color: lighten($color: $primary-color-button-color, $amount: 10);
+        }
+    }
+
+    &:hover {
+        border-color: lighten($color: $primary-color-button-color, $amount: 10);
+    }
+}
+
+
+.icon-button {
+    transition: all 0.3s;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: $icon-button-shadow;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    padding: 7px 12px;
+    background-color: $white-color;
+
+    i {
+        font-size: 13px;
+        color: lighten($color: $primary-color-button-color, $amount: 10);
+
+    }
+
+    &:hover {
+        box-shadow: $icon-button-shadow-hover;
+        border-color: lighten($color: $primary-color-button-color, $amount: 10);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+.icon-buttons-container {
+    display: flex;
+    gap: 0 0.7rem;
+}
+
+.icon-button-borderless {
+    background: transparent;
+    background-color: transparent;
+    box-shadow: none;
+    transition: all ease 0.3s;
+
+    padding: 0 10px;
+
+    i {
+        transition: all ease 0.3s;
+        color: $icon-color;
+    }
+
+    &:hover {
+        box-shadow: none;
+
+        i {
+            color: darken($color: $icon-color, $amount: 30);
+        }
+    }
+}
+
+i {
+    text-decoration: none !important;
+}
+
+.blue-color {
+    color: $blue-text-color;
+}
+
+.light-blue-color {
+    color: rgb(157 157 255);
+}
+
+.green-color {
+    color: $green-text-color;
+}
+
+.light-red-color {
+    color: #FDA6BF;
+}
+.red-color {
+    color: $red-text-color;
+}
+
+.orange-color {
+    color: $orange-text-color;
+}
+
+.icon-color {
+    color: $icon-color;
+}
