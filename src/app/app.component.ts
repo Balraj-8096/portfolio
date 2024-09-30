@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +7,6 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class AppComponent {
   title = 'portfolio';
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+
+  // ng build --output-path docs --base-href /portfolio/
 }

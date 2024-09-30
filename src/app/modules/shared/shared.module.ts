@@ -15,7 +15,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NoDataFoundComponent } from './components/no-data-found/no-data-found.component';
 import { InformationDetailsComponent } from './components/information-details/information-details.component';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
-import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +26,6 @@ import { ProfilePageComponent } from './components/profile-page/profile-page.com
     NoDataFoundComponent,
     InformationDetailsComponent,
     FileUploadComponent,
-    ProfilePageComponent,
   ],
   imports: [
     RouterModule,
@@ -44,7 +42,6 @@ import { ProfilePageComponent } from './components/profile-page/profile-page.com
     ConfirmationComponent,
     NoDataFoundComponent,
     MaterialModule,
-    ProfilePageComponent
 
   ],
   providers: [

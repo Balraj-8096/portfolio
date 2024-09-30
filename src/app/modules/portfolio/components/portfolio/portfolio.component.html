@@ -1,6 +1,6 @@
 <section class="d-flex gap-0-1 page-container">
     <div class="d-flex animate-fadeRight" style="margin-top: 26px;">
-        <app-profile-page></app-profile-page>
+        <app-profile-page [profile]="portfolio.profile"></app-profile-page>
 
     </div>
 
@@ -56,6 +56,9 @@
 
                 <div class="fs-16 d-flex flex-column gap-05-0">
                     <span>
+                        {{portfolio.CareerObjective}}
+                    </span>
+                    <!-- <span>
 
                         Highly motivated Angular Developer with two of experience in crafting robust and dynamic web
                         applications. Demonstrated proficiency in leveraging the Angular framework to deliver responsive
@@ -67,7 +70,7 @@
                         Seeking to contribute expertise in Angular development to a forward-thinking organization
                         committed to innovation and excellence in web
                         development.
-                    </span>
+                    </span> -->
                 </div>
 
             </section>
@@ -177,34 +180,29 @@
                                 Education
                             </span>
 
-                            <div class="timeline-item d-flex flex-column gap-05-0">
-                                <span  class="fs-16 fw-600 blue-color">
-                                    Master of Fine Arts &amp; Graphic Design
-                                </span>
-                                <span class="fw-600">2015 - 2016</span>
-                                <span>
-                                    Rochester Institute of Technology, Rochester, NY
-                                </span>
-                                <span>
-                                    Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit.
-                                    Ea vero
-                                    voluptatum qui ut dignissimos deleniti nerada porti sand markend
-                                </span>
-                            </div>
-                            <div class="timeline-item d-flex flex-column gap-05-0">
-                                <span  class="fs-16 fw-600 blue-color">
-                                    Master of Fine Arts &amp; Graphic Design
-                                </span>
-                                <span class="fw-600">2015 - 2016</span>
-                                <span>
-                                    Rochester Institute of Technology, Rochester, NY
-                                </span>
-                                <span>
-                                    Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit.
-                                    Ea vero
-                                    voluptatum qui ut dignissimos deleniti nerada porti sand markend
-                                </span>
-                            </div>
+                            <ng-container *ngFor="let education of portfolio.education">
+
+                                <div class="timeline-item d-flex flex-column gap-05-0">
+                                    <span  class="fs-16 fw-600 blue-color">
+                                        {{education.degree}}
+                                    </span>
+                                    <span class="fw-600">
+                                        {{education.startDate}} 
+                                        -
+                                        {{education.endDate}} 
+                                    </span>
+                                    <span>
+                                        {{education.institution}} - {{education.university}}
+                                    </span>
+                                    <span>
+                                        {{education.grade}} 
+                                    
+                                    </span>
+                                    <span>
+                                        {{education.about}}
+                                    </span>
+                                </div>
+                            </ng-container>
 
                         </div>
 
@@ -212,57 +210,30 @@
                             <span class="timeline-title fs-18 fw-600">
                                 Professional Experience
                             </span>
-                            <div class="timeline-item d-flex flex-column gap-05-0">
-                                <span  class="fs-16 fw-600 blue-color">
-                                    Senior graphic design specialist
-                                </span>
-                                <span>
-                                    2019 - Present
-                                </span>
-                                <span>
-                                    Experion, New York, NY
-                                </span>
-                                <ul>
-                                    <li>Lead in the design, development, and implementation of the graphic, layout,
-                                        and
-                                        production communication materials</li>
-                                    <li>Delegate tasks to the 7 members of the design team and provide counsel on
-                                        all aspects of
-                                        the project. </li>
-                                    <li>Supervise the assessment of all graphic materials in order to ensure quality
-                                        and
-                                        accuracy of the design</li>
-                                    <li>Oversee the efficient use of production project budgets ranging from $2,000
-                                        - $25,000
-                                    </li>
-                                </ul>
-                            </div>
+                            <ng-container *ngFor="let experience of portfolio.experiences">
 
-                            <div class="timeline-item d-flex flex-column gap-05-0">
-                                <span  class="fs-16 fw-600 blue-color">
-                                    Senior graphic design specialist
-                                </span>
-                                <span>
-                                    2019 - Present
-                                </span>
-                                <span>
-                                    Experion, New York, NY
-                                </span>
-                                <ul>
-                                    <li>Lead in the design, development, and implementation of the graphic, layout,
-                                        and
-                                        production communication materials</li>
-                                    <li>Delegate tasks to the 7 members of the design team and provide counsel on
-                                        all aspects of
-                                        the project. </li>
-                                    <li>Supervise the assessment of all graphic materials in order to ensure quality
-                                        and
-                                        accuracy of the design</li>
-                                    <li>Oversee the efficient use of production project budgets ranging from $2,000
-                                        - $25,000
-                                    </li>
-                                </ul>
-                            </div>
+                                <div class="timeline-item d-flex flex-column gap-05-0">
+                                    <span  class="fs-16 fw-600 blue-color">
+                                        {{experience.jobTitle}}
+                                    </span>
+                                    <span>
+                                        {{experience.startDate}} - Present
+                                    </span>
+                                    <span>
+                                        {{experience.company}}
+                                    </span>
+
+                                    <ul>
+                                        <ng-container *ngFor="let responsibility of experience.responsibilities">
+
+                                            <li>
+                                                {{responsibility}}
+                                            </li>
+                                           
+                                        </ng-container>
+                                    </ul>
+                                </div>
+                            </ng-container>
 
                         </div>
                     </div>
